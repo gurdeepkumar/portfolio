@@ -1,0 +1,19 @@
+{% load static %} {% load static tailwind_tags %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gurdeep Kumar</title>
+
+    <link rel="stylesheet" href="{% static 'core/css/style.css' %}" />
+    {% tailwind_css %}
+  </head>
+  <body class="bg-gray-900 text-gray-200">
+    {% block content %}{% endblock content %}
+
+    <footer class="bg-gray-800 text-white p-4 text-center">
+      <p>© 2025 Your Name. All rights reserved.</p>
+    </footer>
+  </body>
+</html>
