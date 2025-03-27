@@ -173,6 +173,7 @@ cython_debug/
 
 # Static and media files
 /media/
+*.jpeg
 
 # IDE and editor files
 .DS_Store
