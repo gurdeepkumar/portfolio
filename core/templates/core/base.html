@@ -9,12 +9,9 @@
     <link rel="stylesheet" href="{% static 'core/css/style.css' %}" />
     {% tailwind_css %}
   </head>
-  <body class="bg-gray-800 text-gray-200">
-    {% block content %}{% endblock content %}
-
-    <footer
-      class="bg-gray-700 fixed bottom-0 w-full text-white p-4 text-center"
-    >
+  <body class="bg-gray-800 flex flex-col min-h-screen text-gray-200">
+    <main class="grow">{% block content %}{% endblock content %}</main>
+    <footer class="bg-gray-700 w-full text-white p-4 text-center">
       <p>© Build with Django + Tailwind ❤️</p>
     </footer>
   </body>
