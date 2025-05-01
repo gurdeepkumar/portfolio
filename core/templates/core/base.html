@@ -5,14 +5,14 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Gurdeep Kumar</title>
-    <link
+    <!-- <link
       href="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.css"
       rel="stylesheet"
-    />
+    /> -->
     <link rel="stylesheet" href="{% static 'core/css/style.css' %}" />
     {% tailwind_css %}
   </head>
-  <body class="bg-gray-800 flex flex-col min-h-screen text-gray-200">
+  <!-- <body class="bg-gray-800 flex flex-col min-h-screen text-gray-200">
     <button
       data-drawer-target="default-sidebar"
       data-drawer-toggle="default-sidebar"
@@ -155,7 +155,7 @@
       <div
         class="p-4 border-2 border-gray-200 border-dashed rounded-lg dark:border-gray-700"
       >
-        <main class="grow">{% block content %}{% endblock content %}</main>
+        <main class="grow"></main>
         <footer class="bg-gray-800 w-full text-white p-4 text-center">
           <p>© Build with Django + Tailwind ❤️</p>
         </footer>
@@ -163,5 +163,16 @@
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
+  </body> -->
+
+  <body class="bg-gray-800 flex flex-col min-h-screen text-gray-200">
+    <div>
+      <main class="grow">{% block content %}{% endblock content %}</main>
+      <footer class="bg-gray-800 w-full text-white p-4 text-center">
+        <p>© Build with Django + Tailwind ❤️</p>
+      </footer>
+    </div>
+
+    <!-- <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script> -->
   </body>
 </html>
