@@ -5,12 +5,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Gurdeep Kumar</title>
-    <!-- <link
-      href="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.css"
-      rel="stylesheet"
-    /> -->
     <link rel="stylesheet" href="{% static 'core/css/style.css' %}" />
     {% tailwind_css %}
+
+    <!-- Google Analytics -->
     <script
       async
       src="https://www.googletagmanager.com/gtag/js?id=G-C96PGYZ9RD"
@@ -21,20 +19,26 @@
         dataLayer.push(arguments);
       }
       gtag("js", new Date());
-
       gtag("config", "G-C96PGYZ9RD");
     </script>
   </head>
-  <!-- Google tag (gtag.js) -->
 
-  <body class="bg-gray-800 flex flex-col min-h-screen text-gray-200">
-    <div>
+  <body
+    class="relative bg-repeat bg-top backdrop-blur-[3px] bg-auto min-h-screen text-gray-200"
+    style="background-image: url('{% static 'images/bg.webp' %}')"
+  >
+    <!-- Black overlay -->
+    <div class="absolute inset-0 bg-black opacity-85 z-0"></div>
+
+    <!-- Page content layered above -->
+    <div class="relative z-10 flex flex-col min-h-screen">
       <main class="grow">{% block content %}{% endblock content %}</main>
-      <footer class="bg-gray-700 w-full text-white p-4 text-center">
-        <p>© Build with Django + Tailwind ❤️</p>
+      <footer
+        class="bg-[#084E34] flex flex-row items-center justify-center w-full text-white p-4 text-center"
+      >
+        <p>© Build with Django + Tailwind</p>
+        <div class="ml-2 animate-pulse">❤️</div>
       </footer>
     </div>
-
-    <!-- <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script> -->
   </body>
 </html>
