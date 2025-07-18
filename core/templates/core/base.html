@@ -6,6 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Gurdeep Kumar</title>
     <link rel="stylesheet" href="{% static 'core/css/style.css' %}" />
+    <!-- Alpine.js CDN -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"
+      defer
+    ></script>
+
     {% tailwind_css %}
 
     <!-- Google Analytics -->
@@ -40,5 +46,24 @@
         <div class="ml-2 animate-pulse">❤️</div>
       </footer>
     </div>
+    <!-- Alpine Component -->
+    <script>
+      function carousel() {
+        return {
+          currentIndex: 0,
+          totalSlides: 3,
+          next() {
+            this.currentIndex = (this.currentIndex + 1) % this.totalSlides;
+          },
+          prev() {
+            this.currentIndex =
+              (this.currentIndex - 1 + this.totalSlides) % this.totalSlides;
+          },
+          goTo(index) {
+            this.currentIndex = index;
+          },
+        };
+      }
+    </script>
   </body>
 </html>
